@@ -1,13 +1,16 @@
 syntax = "proto3";
 
-option csharp_namespace = "MyGreetingService.Server";
+option csharp_namespace = "ConsoleApp1";
+
 
 service WorkerIntegration {
 	rpc GetWorkerStream (EmptyMessage) returns (stream WorkerAction);
+
 	rpc GetWorkers(EmptyMessage) returns (WorkerList);
-	rpc CreateWorker (WorkerMessage) returns (EmptyMessage);
-	rpc UpdateWorker (WorkerMessage) returns (EmptyMessage);
-	rpc DeleteWorker (WorkerMessage) returns (EmptyMessage);
+
+	rpc CreateWorker (WorkerMessage) returns (EmptyMessage); // Action.Create
+	rpc UpdateWorker (WorkerMessage) returns (EmptyMessage); //	Action.Update	Тут возвращать новый список или обновленного пользователя?
+	rpc DeleteWorker (WorkerMessage) returns (EmptyMessage); // Action.Delete
 }
 
 message EmptyMessage
@@ -23,7 +26,6 @@ message WorkerAction
 
 message WorkerMessage
 {
-	int64 id = 1;
 	string LastName = 2;
 	string FirstName = 3;
 	string MiddleName = 4;
@@ -33,7 +35,7 @@ message WorkerMessage
 }
 
 message WorkerList {
-  repeated WorkerMessage workers = 1;
+  repeated WorkerMessage workers = 1;	// добавил workers чтобы получить список WorkerMessage
 }
 
 enum Sex {

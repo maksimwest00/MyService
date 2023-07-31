@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyGreetingService.Server", "..\MyGreetingService.Server\MyGreetingService.Server.csproj", "{716502FC-2E56-49DC-8D77-2296CB5B8349}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyGreetingService.Common", "MyGreetingService.Common\MyGreetingService.Common.csproj", "{D90CF4BB-840E-4DBF-8CFF-ABAF1FF4FB30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFClient", "..\WPFClient\WPFClient\WPFClient.csproj", "{5007879F-815A-45CF-A694-80A248AF8510}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{716502FC-2E56-49DC-8D77-2296CB5B8349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716502FC-2E56-49DC-8D77-2296CB5B8349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716502FC-2E56-49DC-8D77-2296CB5B8349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716502FC-2E56-49DC-8D77-2296CB5B8349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90CF4BB-840E-4DBF-8CFF-ABAF1FF4FB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90CF4BB-840E-4DBF-8CFF-ABAF1FF4FB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90CF4BB-840E-4DBF-8CFF-ABAF1FF4FB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90CF4BB-840E-4DBF-8CFF-ABAF1FF4FB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5007879F-815A-45CF-A694-80A248AF8510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5007879F-815A-45CF-A694-80A248AF8510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5007879F-815A-45CF-A694-80A248AF8510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5007879F-815A-45CF-A694-80A248AF8510}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

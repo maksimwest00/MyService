@@ -12,6 +12,11 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyGreetingService\MyGreetingService.Common\MyGreetingService.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,18 @@
+﻿<Application x:Class="MyGreetingService.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyGreetingService.WPF"
+             xmlns:VM="clr-namespace:MyGreetingService.WPF.ViewModels"
+             xmlns:VIEW="clr-namespace:MyGreetingService.WPF.Views">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type VM:FirstViewModel}">
+            <VIEW:FirstView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type VM:SecondViewModel}">
+            <VIEW:SecondView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type VM:NavigationViewModel}">
+            <VIEW:NavigationView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

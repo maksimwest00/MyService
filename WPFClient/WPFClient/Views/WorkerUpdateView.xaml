@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="WPFClient.Views.WorkerUpdateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:components="clr-namespace:WPFClient.Components"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <components:CustomStackPanel Spacing="5" Orientation="Vertical">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="LastName"/>
+                    <TextBox Text="{Binding EditingWorker.LastName, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="FirstName"/>
+                    <TextBox Text="{Binding EditingWorker.FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="MiddleName"/>
+                    <TextBox Text="{Binding EditingWorker.MiddleName, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Birthday"/>
+                    <TextBox Text="{Binding EditingWorker.Birthday,UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Sex"/>
+                    <ComboBox ItemsSource="{Binding SexList}" SelectedItem="{Binding EditingWorker.Sex, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <components:CustomStackPanel Spacing="5" Orientation="Horizontal">
+                    <TextBlock Text="HaveChildren"/>
+                    <CheckBox IsChecked="{Binding EditingWorker.HaveChildren, UpdateSourceTrigger=PropertyChanged}"/>
+                </components:CustomStackPanel>
+                <Button Content="Изменить">
+                    <behaviors:Interaction.Triggers>
+                        <behaviors:EventTrigger EventName="Click">
+                            <behaviors:InvokeCommandAction Command="{Binding EditWorkerCommand}"/>
+                        </behaviors:EventTrigger>
+                    </behaviors:Interaction.Triggers>
+                </Button>
+            </components:CustomStackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="WorkerUpdateView" Width="Auto" Foreground="Red"/>
+                <Button Content="Вернуться">
+                    <behaviors:Interaction.Triggers>
+                        <behaviors:EventTrigger EventName="Click">
+                            <behaviors:InvokeCommandAction Command="{Binding BackCommand}"/>
+                        </behaviors:EventTrigger>
+                    </behaviors:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

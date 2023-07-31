@@ -1,0 +1,26 @@
+﻿<Application x:Class="WPFClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFClient"
+             xmlns:VM="clr-namespace:WPFClient.ViewModel"
+             xmlns:VIEW="clr-namespace:WPFClient.Views">
+    <Application.Resources>
+        
+        <DataTemplate DataType="{x:Type VM:StartViewModel}">
+            <VIEW:StartView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VM:WorkerDataViewModel}">
+            <VIEW:WorkerDataView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VM:WorkerCreateViewModel}">
+            <VIEW:WorkerCreateView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VM:WorkerUpdateViewModel}">
+            <VIEW:WorkerUpdateView/>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>
