@@ -20,22 +20,16 @@
             </DataGrid>
         </Grid>
         <Grid Grid.Row="1">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="WorkerDataView" Width="Auto" Foreground="Red"/>
-                <Button Content="CreateView">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <TextBlock Text="Список работников" Width="Auto" Foreground="Red"/>
+                <Button Content="Добавить нового работника">
                 <behaviors:Interaction.Triggers>
                     <behaviors:EventTrigger EventName="Click">
                         <behaviors:InvokeCommandAction Command="{Binding CreateWorkerCommand}"/>
                     </behaviors:EventTrigger>
                 </behaviors:Interaction.Triggers>
             </Button>
-                <Button Content="UpdateView">
-                <behaviors:Interaction.Triggers>
-                    <behaviors:EventTrigger EventName="Click">
-                        <behaviors:InvokeCommandAction Command="{Binding UpdateWorkerCommand}"/>
-                    </behaviors:EventTrigger>
-                </behaviors:Interaction.Triggers>
-            </Button>
+                <Button Content="Редактирование выбранного работника" Command="{Binding UpdateWorkerCommand}"/>
                 <Button Content="Удалить выбранного работника" Command="{Binding DeleteWorkerCommand}"/>
             </StackPanel>
         </Grid>

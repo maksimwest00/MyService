@@ -33,7 +33,7 @@
                     <TextBlock Text="HaveChildren"/>
                     <CheckBox IsChecked="{Binding EditingWorker.HaveChildren, UpdateSourceTrigger=PropertyChanged}"/>
                 </components:CustomStackPanel>
-                <Button Content="Изменить">
+                <Button Content="Редактировать">
                     <behaviors:Interaction.Triggers>
                         <behaviors:EventTrigger EventName="Click">
                             <behaviors:InvokeCommandAction Command="{Binding EditWorkerCommand}"/>
@@ -41,8 +41,8 @@
                     </behaviors:Interaction.Triggers>
                 </Button>
             </components:CustomStackPanel>
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="WorkerUpdateView" Width="Auto" Foreground="Red"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <TextBlock Text="Редактирование работника" Width="Auto" Foreground="Red"/>
                 <Button Content="Вернуться">
                     <behaviors:Interaction.Triggers>
                         <behaviors:EventTrigger EventName="Click">

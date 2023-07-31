@@ -27,7 +27,7 @@ namespace WPFClient.ViewModel
 
 
             this.CreateWorkerCommand = new RelayCommand(CreateWorker, (obj) => true);
-            this.UpdateWorkerCommand = new RelayCommand(UpdateWorker, (obj) => true);
+            this.UpdateWorkerCommand = new RelayCommand(UpdateWorker, (obj) => this.DataGridSelectedWorker != null);
             this.DeleteWorkerCommand = new RelayCommand(DeleteWorker, (obj) => this.DataGridSelectedWorker != null);
             GetWorkers();
         }

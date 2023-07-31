@@ -44,8 +44,8 @@
                     </behaviors:Interaction.Triggers>
                 </Button>
             </components:CustomStackPanel>
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="WorkerCreateView" Width="Auto" Foreground="Red"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <TextBlock Text="Добавление нового работника" Foreground="Red"/>
                 <Button Content="Вернуться">
                     <behaviors:Interaction.Triggers>
                         <behaviors:EventTrigger EventName="Click">
